@@ -34,6 +34,13 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        app.loadScript('http://localhost:8000/app.js');
+    },
+    loadScript: function(src) {
+        var script = document.createElement('script');
+        script.src = src;
+        document.body.appendChild(script);
+        console.log('add script: ' + src);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
