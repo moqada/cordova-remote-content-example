@@ -1,0 +1,5 @@
+console.log
+
+# Android
+ant-build/
+ant-gen/
